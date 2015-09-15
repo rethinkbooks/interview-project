@@ -1,0 +1,12 @@
+- if params[:q].present?
+  %h1 Search Results
+  - if @repos.present?
+    #repos
+      - @repos.each do |repo|
+        .repo
+          .repo-name
+            = repo.name
+          .repo-language
+            = repo.language
+  - else
+    %p No results found

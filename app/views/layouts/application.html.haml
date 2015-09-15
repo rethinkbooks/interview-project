@@ -1,0 +1,27 @@
+!!!
+%html{ dir: 'ltr', lang: 'en-US' }
+  %head
+    %meta{ charset: 'utf-8' }
+    %title Search GitHub
+    %meta{ content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no', name: 'viewport' }
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          - if current_user.present?
+            %button.navbar-toggle.collapsed{ 'aria-controls' => 'navbar', 'aria-expanded' => 'false', 'data-target' => '#main-navbar', 'data-toggle' => 'collapse', type: 'button' }
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+          %a.navbar-brand{ href: root_path } Search GitHub
+        - if current_user.present?
+          #main-navbar.navbar-collapse.collapse
+            %ul.nav.navbar-nav.navbar-right
+              %li
+                = link_to 'Sign Out', destroy_user_session_path, method: :delete
+    .container
+      = yield

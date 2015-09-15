@@ -21,3 +21,13 @@
 @import "bootstrap";
 @import "mixins";
 @import "variables";
+
+body {
+    padding-top: 40px;
+}
+
+@media (min-width: $screen-sm) {
+    body {
+        padding-top: 70px;
+    }
+}
