@@ -18,3 +18,5 @@
 .\#*
 *~
 *.swp
+
+/test/vcr_cassettes/*.yml

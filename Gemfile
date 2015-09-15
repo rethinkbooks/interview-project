@@ -22,3 +22,12 @@ group :development do
   gem 'spring'
   gem 'web-console', '~> 2.0'
 end
+
+group :test do
+  gem 'minitest'
+  gem 'mini_backtrace'
+  gem 'minitest-reporters'
+  gem 'simplecov', require: false
+  gem 'vcr'
+  gem 'webmock'
+end
