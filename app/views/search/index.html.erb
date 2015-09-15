@@ -1,1 +1,17 @@
 <h1>Search GitHub</h1>
+<% if params[:q].present? %>
+  <% if @repos.present? %>
+    <% @repos.each do |repo| %>
+      <div class="repo">
+        <div class="repo-name">
+          <%= repo.name %>
+        </div>
+        <div class="repo-language">
+          <%= repo.language %>
+        </div>
+      </div>
+      <% end %>
+   <% else %>
+     <p>No results found.</p>
+  <% end %>
+<% end %>

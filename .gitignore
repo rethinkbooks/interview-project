@@ -19,6 +19,4 @@
 *~
 *.swp
 
-/test/vcr_cassettes/*.yml
-
 /coverage
