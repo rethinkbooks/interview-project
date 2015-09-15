@@ -27,6 +27,7 @@ end
 
 group :development do
   gem 'rubocop', require: false
+  gem 'quiet_assets'
   gem 'spring'
   gem 'thin'
   gem 'web-console', '~> 2.0'
