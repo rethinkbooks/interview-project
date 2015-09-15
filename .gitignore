@@ -11,3 +11,10 @@
 /log/*
 !/log/.keep
 /tmp
+
+._*
+.DS_Store
+\#*\#
+.\#*
+*~
+*.swp
