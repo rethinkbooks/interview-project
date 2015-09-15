@@ -4,10 +4,13 @@ ruby '2.2.3'
 
 gem 'rails', '4.2.4'
 gem 'pg'
+gem 'bootstrap_form'
+gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
 gem 'kaminari'
 gem 'octokit'
 gem 'omniauth-github'
@@ -22,7 +25,9 @@ group :development, :test do
 end
 
 group :development do
+  gem 'rubocop', require: false
   gem 'spring'
+  gem 'thin'
   gem 'web-console', '~> 2.0'
 end
 
