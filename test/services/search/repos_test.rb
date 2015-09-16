@@ -33,5 +33,15 @@ module Search
         assert_equal results, results.sort { |a, b| a.stargazers_count <=> b.stargazers_count }
       end
     end
+
+    test 'should return an array of repos matching the specified language if provided' do
+      VCR.use_cassette('repo search rails javascript') do
+        results = Search::Repos.call({ q: 'rails', language: 'JavaScript', per_page: 5 })
+
+        results.each do |result|
+          assert_equal 'JavaScript', result.language
+        end
+      end
+    end
   end
 end

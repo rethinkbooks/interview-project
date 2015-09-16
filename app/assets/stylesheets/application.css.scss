@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require rails_bootstrap_forms
+ *= require bootstrap-combobox
  *= require_tree .
  *= require_self
  */
@@ -74,6 +75,12 @@ body {
     }
 }
 
+.form-inline {
+    .combobox-container {
+        display: block;
+    }
+}
+
 .title {
     font-weight: bold;
     margin-bottom: 10px;
@@ -98,8 +105,16 @@ body {
 
 @media (min-width: $screen-sm) {
     .form-inline {
+        label {
+            line-height: 33px;
+        }
+
         button {
             margin-left: 5px;
+        }
+
+        .combobox-container {
+            display: inline-block;
         }
     }
 }

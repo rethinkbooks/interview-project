@@ -13,5 +13,9 @@
 #= require jquery
 #= require jquery_ujs
 #= require bootstrap-sprockets
+#= require bootstrap-combobox
 #= require_tree .
 #= require turbolinks
+
+$ ->
+  $(".combobox").combobox()

@@ -9,6 +9,8 @@ module Search
 
       options = search_options(args)
 
+      query = build_query(query, args)
+
       results = client.search_repos(query, options)
 
       repos = results[:items].map { |result| Repo.new(result) }
@@ -17,6 +19,12 @@ module Search
     end
 
     private
+
+    def self.build_query(query, args)
+      qualifiers = args.slice(:in, :size, :forks, :fork, :created, :pushed, :user, :repo, :language, :stars).map { |qualifier, value| "#{qualifier}:#{value}" }
+
+      [query, qualifiers.join(' ')].reject(&:blank?).join(' ')
+    end
 
     def self.search_options(args)
       page = args.delete(:page).to_s.to_i
