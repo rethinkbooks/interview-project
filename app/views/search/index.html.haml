@@ -2,9 +2,9 @@
   = bootstrap_form_tag url: root_path, html: { class: 'form-inline', method: :get } do |f|
     = f.text_field :q, value: params[:q], label: 'Search Repos on GitHub:&nbsp;'.html_safe
     = f.form_group :sort, label: { text: 'Sort by:&nbsp;'.html_safe } do
+      = f.radio_button :order, '', label: 'Relevance', checked: !['desc', 'asc'].include?(params[:order]), name: 'order'
       = f.radio_button :order, 'desc', label: 'Stargazers Descending', checked: params[:order] == 'desc', name: 'order'
       = f.radio_button :order, 'asc', label: 'Stargazers Ascending', checked: params[:order] == 'asc', name: 'order'
-      = f.radio_button :order, '', label: 'Relevance', checked: !['desc', 'asc'].include?(params[:order]), name: 'order'
     = f.button '<span class="glyphicon glyphicon-search"></span> Search'.html_safe, class: 'btn btn-primary'
 - if params[:q].present?
   %h1 Search Results
