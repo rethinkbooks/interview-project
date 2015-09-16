@@ -20,10 +20,11 @@
       - @repos.each do |repo|
         .repo.row
           .repo-name.col-xs-12.col-sm-6
-            = link_to repo.full_name, repo.html_url
+            = link_to repo.full_name, repo.html_url, target: '_blank'
           .repo-language.col-xs-6.col-sm-3
             = repo.language
           .repo-stars.col-xs-6.col-sm-3.text-right
             = "#{repo.stargazers_count} &#x2605;".html_safe
+    = paginate @repos, route: :root_path
   - else
     %p No results found
