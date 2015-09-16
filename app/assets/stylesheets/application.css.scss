@@ -75,6 +75,11 @@ body {
     }
 }
 
+#no-results {
+    color: $gray-light;
+    font-size: 1.9rem;
+}
+
 .form-inline {
     .combobox-container {
         display: block;

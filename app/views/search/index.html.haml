@@ -39,4 +39,4 @@
             = link_to '&#x2605;'.html_safe, "#{repo.html_url}/stargazers", target: '_blank'
     = paginate @repos, route: :root_path
   - else
-    %p No results found
+    %p#no-results No results found.
