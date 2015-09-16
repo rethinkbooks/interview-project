@@ -11,7 +11,7 @@
           - Repo.esoteric_languages.each do |language|
             %option{ value: language, selected: params[:language] == language }= language
     %br.visible-sm
-    = f.form_group :sort, label: { text: 'Sort by:&nbsp;'.html_safe } do
+    = f.form_group :sort, label: { text: 'Sort By:&nbsp;'.html_safe } do
       = f.radio_button :order, '', label: 'Relevance', checked: !['desc', 'asc'].include?(params[:order]), name: 'order'
       = f.radio_button :order, 'desc', label: 'Stars Descending', checked: params[:order] == 'desc', name: 'order'
       = f.radio_button :order, 'asc', label: 'Stars Ascending', checked: params[:order] == 'asc', name: 'order'
