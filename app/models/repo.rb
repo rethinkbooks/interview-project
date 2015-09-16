@@ -1,3 +1,7 @@
+# Model for GitHub repos.
+#
+# This model is not backed by the database since no search results are stored
+# or cached.
 class Repo
   include Virtus.model
 
@@ -70,13 +74,13 @@ class Repo
   attribute :default_branch, String
   attribute :score, Float
 
-  # These two lists are taken directly from the GitHub advanced search page:
-  # https://github.com/search/advanced
+  # List of popular languages, taken from https://github.com/search/advanced.
   def self.popular_languages
     ['ActionScript', 'C', 'C#', 'C++', 'Clojure', 'CoffeeScript', 'CSS', 'Go', 'Haskell', 'HTML', 'Java', 'JavaScript', 'Lua', 'Matlab', 'Objective-C', 'Perl', 'PHP', 'Python', 'R', 'Ruby', 'Scala',
      'Shell', 'Swift', 'TeX', 'VimL']
   end
 
+  # List of not so popular languages, taken from https://github.com/search/advanced.
   def self.esoteric_languages
     ['ABAP', 'Ada', 'Agda', 'AGS Script', 'Alloy', 'AMPL', 'Ant Build System', 'ANTLR', 'ApacheConf', 'Apex', 'API Blueprint', 'APL', 'AppleScript', 'Arc', 'Arduino', 'AsciiDoc', 'ASP', 'AspectJ',
      'Assembly', 'ATS', 'Augeas', 'AutoHotkey', 'AutoIt', 'Awk', 'Batchfile', 'Befunge', 'Bison', 'BitBake', 'BlitzBasic', 'BlitzMax', 'Bluespec', 'Boo', 'Brainfuck', 'Brightscript', 'Bro',
@@ -101,6 +105,11 @@ class Repo
      'Xojo', 'XPages', 'XProc', 'XQuery', 'XS', 'XSLT', 'Xtend', 'Yacc', 'YAML', 'Zephir', 'Zimpl']
   end
 
+  # Create a new repo opbject.
+  #
+  # ==== Parameters
+  # * <tt>attrs</tt> - Attributes from a repo returned by the GitHub API. Only
+  #   known attributes are copied.
   def initialize(attrs = {})
     self.owner = fetch_owner(attrs.delete(:owner))
 
@@ -109,13 +118,16 @@ class Repo
     end
   end
 
+  # Compare two repo objects by their attributes.
+  #
+  # ==== Parameters
+  # * <tt>other</tt> - The other repo object to compare against.
   def ==(other)
     !attributes.keys.map { |attribute| send(attribute) == other.send(attribute) }.include?(false)
   end
 
   private
 
-  # I'm not happy with the name of the argument, but I suppose it's descriptive enough.
   def fetch_owner(original_owner_object)
     return Owner.new if original_owner_object.nil? || !original_owner_object.respond_to?(:attrs)
 

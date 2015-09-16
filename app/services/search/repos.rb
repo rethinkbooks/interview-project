@@ -1,5 +1,28 @@
 module Search
+  # The repo search service. Searches GitHub for repos using Octokit.rb. Can be
+  # used by calling a single class method or by creating a new instance and then
+  # calling the <tt>call</tt> instance method.
+  #
+  # Instances of the repo search service can be initialized with their arguments
+  # and all subsequent calls made with that instance will use the initializing
+  # arguments unless otherwise specified.
   class Repos
+    # Search GitHub for matching repos.
+    #
+    # ==== Parameters
+    # * <tt>args</tt> - Arguments for the search. Only the <tt>:q</tt> option is
+    #   required.
+    #
+    #   * <tt>:q</tt> - The actual search query.
+    #   * <tt>:page</tt> - The page offset. Defaults to 0.
+    #   * <tt>:per_page</tt> - The number of repos per page. Defaults to 100.
+    #   * <tt>:order</tt> - <tt>'desc'</tt> to sort by stargazers descending or
+    #     <tt>'asc'</tt> to sort by stargazers ascending. Otherwise sort by the
+    #     default: relevance.
+    #   * <tt>:language</tt> - The programming language to filter by.
+    #
+    #   All other qualifiers supported by the GitHub API are supported. For more
+    #   info see: https://developer.github.com/v3/search/#search-repositories.
     def self.call(args = {})
       query = args.delete(:q)
 
@@ -42,10 +65,22 @@ module Search
     end
     private_class_method :search_options
 
+    # Create a new repo search service object.
+    #
+    # ==== Parameters
+    # * <tt>args</tt> - Arguments for any subsequent calls to to <tt>call</tt>.
     def initialize(args = {})
       @args = args
     end
 
+    # Search GitHub for matching repos.
+    #
+    # ==== Parameters
+    # * <tt>args</tt> - Arguments for the search. See the class <tt>call</tt>
+    #   method for more information about what can be passed in.
+    #
+    #   NOTE: If arguments are passed the previous arguments, including those
+    #   passed when creating the service object will be overwritten!
     def call(args = nil)
       @args ||= args
 

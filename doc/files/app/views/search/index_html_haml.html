@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>index.html.haml</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            index.html.haml
+        </h1>
+        <ul class="files">
+            <li>app/views/search/index.html.haml</li>
+            <li>Last modified: 2015-09-16 10:44:55 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>.well</p>
+
+<pre><code>= bootstrap_form_tag url: root_path, html: { class: &#39;form-inline&#39;, method: :get } do |f|
+  = f.text_field :q, value: params[:q], label: &#39;Repo Name:&amp;nbsp;&#39;.html_safe
+  = f.form_group :language, label: { text: &#39;Language:&amp;nbsp;&#39;.html_safe } do
+    %select.combobox.form-control{ name: &#39;language&#39; }
+      %option{ value: &#39;&#39;, selected: params[:language].blank? } Any
+      %optgroup{ label: &#39;Popular&#39; }
+        - Repo.popular_languages.each do |language|
+          %option{ value: language, selected: params[:language] == language }= language
+      %optgroup{ label: &#39;Esoteric&#39; }
+        - Repo.esoteric_languages.each do |language|
+          %option{ value: language, selected: params[:language] == language }= language
+  %br.visible-sm
+  = f.form_group :sort, label: { text: &#39;Sort By:&amp;nbsp;&#39;.html_safe } do
+    = f.radio_button :order, &#39;&#39;, label: &#39;Relevance&#39;, checked: ![&#39;desc&#39;, &#39;asc&#39;].include?(params[:order]), name: &#39;order&#39;
+    = f.radio_button :order, &#39;desc&#39;, label: &#39;Stars Descending&#39;, checked: params[:order] == &#39;desc&#39;, name: &#39;order&#39;
+    = f.radio_button :order, &#39;asc&#39;, label: &#39;Stars Ascending&#39;, checked: params[:order] == &#39;asc&#39;, name: &#39;order&#39;
+  %br.visible-sm.visible-md
+  = f.button &#39;&lt;span class=&quot;glyphicon glyphicon-search&quot;&gt;&lt;/span&gt; Search&#39;.html_safe, class: &#39;btn btn-primary&#39;</code></pre>
+<ul><li>
+<p>if <a href=":q">params</a>.present? %h1 <a
+href="../../../../classes/Search.html">Search</a> Results</p>
+<ul><li>
+<p>if @repos.present? repos</p>
+
+<pre><code>.row.hidden-xs
+  .title.col-sm-6
+    Repo
+  .title.col-sm-3
+    Langauge
+  .title.col-sm-3.text-right
+    Stargazers
+- @repos.each do |repo|
+  .repo.row
+    .repo-name.col-xs-12.col-sm-6
+      = link_to repo.full_name, repo.html_url, target: &#39;_blank&#39;
+    .repo-language.col-xs-6.col-sm-3
+      = repo.language
+    .repo-stars.col-xs-6.col-sm-3.text-right
+      = repo.stargazers_count
+      = link_to &#39;&amp;#x2605;&#39;.html_safe, &quot;#{repo.html_url}/stargazers&quot;, target: &#39;_blank&#39;</code></pre>
+
+<h1 id="label-paginate+-40repos-2C+route-3A+-3Aroot_path">paginate @repos, route: :root_path</h1>
+</li><li>
+<p>else %p No results found</p>
+</li></ul>
+</li></ul>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+              </div>
+
+    </div>
+  </body>
+</html>

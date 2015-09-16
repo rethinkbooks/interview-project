@@ -1,0 +1,25 @@
+Wed, 16 Sep 2015 13:36:59 -0500
+app/assets/images/GitHub-Mark-Light-32px.png	Tue, 15 Sep 2015 23:53:23 -0500
+app/assets/javascripts/application.js.coffee	Wed, 16 Sep 2015 10:39:11 -0500
+app/assets/stylesheets/application.css.scss	Wed, 16 Sep 2015 08:49:57 -0500
+app/assets/stylesheets/mixins.scss	Tue, 15 Sep 2015 17:35:14 -0500
+app/assets/stylesheets/variables.scss	Tue, 15 Sep 2015 17:35:25 -0500
+app/controllers/application_controller.rb	Wed, 16 Sep 2015 12:45:26 -0500
+app/controllers/omniauth_callbacks_controller.rb	Wed, 16 Sep 2015 12:43:32 -0500
+app/controllers/search_controller.rb	Wed, 16 Sep 2015 12:47:28 -0500
+app/helpers/application_helper.rb	Tue, 15 Sep 2015 11:09:16 -0500
+app/models/owner.rb	Wed, 16 Sep 2015 13:12:26 -0500
+app/models/repo.rb	Wed, 16 Sep 2015 13:13:25 -0500
+app/models/user.rb	Wed, 16 Sep 2015 12:52:01 -0500
+app/services/search/repos.rb	Wed, 16 Sep 2015 13:36:46 -0500
+app/views/devise/sessions/new.html.haml	Wed, 16 Sep 2015 00:02:25 -0500
+app/views/devise/shared/_links.html.erb	Tue, 15 Sep 2015 12:10:35 -0500
+app/views/kaminari/_first_page.html.haml	Wed, 16 Sep 2015 00:41:44 -0500
+app/views/kaminari/_gap.html.haml	Wed, 16 Sep 2015 00:41:44 -0500
+app/views/kaminari/_last_page.html.haml	Wed, 16 Sep 2015 00:41:44 -0500
+app/views/kaminari/_next_page.html.haml	Wed, 16 Sep 2015 00:41:44 -0500
+app/views/kaminari/_page.html.haml	Wed, 16 Sep 2015 00:41:44 -0500
+app/views/kaminari/_paginator.html.haml	Wed, 16 Sep 2015 00:41:44 -0500
+app/views/kaminari/_prev_page.html.haml	Wed, 16 Sep 2015 00:41:44 -0500
+app/views/layouts/application.html.haml	Tue, 15 Sep 2015 19:34:10 -0500
+app/views/search/index.html.haml	Wed, 16 Sep 2015 10:44:55 -0500

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Repo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Repo 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/repo_rb.html">app/models/repo.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Model for GitHub repos.</p>
+
+<p>This model is not backed by the database since no search results are stored
+or cached.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-3D-3D">==</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-esoteric_languages">esoteric_languages</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-popular_languages">popular_languages</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            Virtus
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-esoteric_languages">
+            
+              <b>esoteric_languages</b>()
+            
+            <a href="../classes/Repo.html#method-c-esoteric_languages" name="method-c-esoteric_languages" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>List of not so popular languages, taken from <a
+href="https://github.com/search/advanced">github.com/search/advanced</a>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-esoteric_languages_source')" id="l_method-c-esoteric_languages_source">show</a>
+                
+              </p>
+              <div id="method-c-esoteric_languages_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/repo.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">esoteric_languages</span>
+  [<span class="ruby-string">&#39;ABAP&#39;</span>, <span class="ruby-string">&#39;Ada&#39;</span>, <span class="ruby-string">&#39;Agda&#39;</span>, <span class="ruby-string">&#39;AGS Script&#39;</span>, <span class="ruby-string">&#39;Alloy&#39;</span>, <span class="ruby-string">&#39;AMPL&#39;</span>, <span class="ruby-string">&#39;Ant Build System&#39;</span>, <span class="ruby-string">&#39;ANTLR&#39;</span>, <span class="ruby-string">&#39;ApacheConf&#39;</span>, <span class="ruby-string">&#39;Apex&#39;</span>, <span class="ruby-string">&#39;API Blueprint&#39;</span>, <span class="ruby-string">&#39;APL&#39;</span>, <span class="ruby-string">&#39;AppleScript&#39;</span>, <span class="ruby-string">&#39;Arc&#39;</span>, <span class="ruby-string">&#39;Arduino&#39;</span>, <span class="ruby-string">&#39;AsciiDoc&#39;</span>, <span class="ruby-string">&#39;ASP&#39;</span>, <span class="ruby-string">&#39;AspectJ&#39;</span>,
+   <span class="ruby-string">&#39;Assembly&#39;</span>, <span class="ruby-string">&#39;ATS&#39;</span>, <span class="ruby-string">&#39;Augeas&#39;</span>, <span class="ruby-string">&#39;AutoHotkey&#39;</span>, <span class="ruby-string">&#39;AutoIt&#39;</span>, <span class="ruby-string">&#39;Awk&#39;</span>, <span class="ruby-string">&#39;Batchfile&#39;</span>, <span class="ruby-string">&#39;Befunge&#39;</span>, <span class="ruby-string">&#39;Bison&#39;</span>, <span class="ruby-string">&#39;BitBake&#39;</span>, <span class="ruby-string">&#39;BlitzBasic&#39;</span>, <span class="ruby-string">&#39;BlitzMax&#39;</span>, <span class="ruby-string">&#39;Bluespec&#39;</span>, <span class="ruby-string">&#39;Boo&#39;</span>, <span class="ruby-string">&#39;Brainfuck&#39;</span>, <span class="ruby-string">&#39;Brightscript&#39;</span>, <span class="ruby-string">&#39;Bro&#39;</span>,
+   <span class="ruby-string">&#39;C-ObjDump&#39;</span>, <span class="ruby-string">&#39;C2hs Haskell&#39;</span>, <span class="ruby-string">&#39;Capn Proton Proto&#39;</span>, <span class="ruby-string">&#39;CartoCSS&#39;</span>, <span class="ruby-string">&#39;Ceylon&#39;</span>, <span class="ruby-string">&#39;Chapel&#39;</span>, <span class="ruby-string">&#39;Charity&#39;</span>, <span class="ruby-string">&#39;ChucK&#39;</span>, <span class="ruby-string">&#39;Cirru&#39;</span>, <span class="ruby-string">&#39;Clarion&#39;</span>, <span class="ruby-string">&#39;Clean&#39;</span>, <span class="ruby-string">&#39;CLIPS&#39;</span>, <span class="ruby-string">&#39;CMake&#39;</span>, <span class="ruby-string">&#39;COBOL&#39;</span>, <span class="ruby-string">&#39;ColdFusion&#39;</span>, <span class="ruby-string">&#39;ColdFusion CFC&#39;</span>,
+   <span class="ruby-string">&#39;Common Lisp&#39;</span>, <span class="ruby-string">&#39;Component Pascal&#39;</span>, <span class="ruby-string">&#39;Cool&#39;</span>, <span class="ruby-string">&#39;Coq&#39;</span>, <span class="ruby-string">&#39;Cpp-ObjDump&#39;</span>, <span class="ruby-string">&#39;Creole&#39;</span>, <span class="ruby-string">&#39;Crystal&#39;</span>, <span class="ruby-string">&#39;Cucumber&#39;</span>, <span class="ruby-string">&#39;Cuda&#39;</span>, <span class="ruby-string">&#39;Cycript&#39;</span>, <span class="ruby-string">&#39;Cython&#39;</span>, <span class="ruby-string">&#39;D&#39;</span>, <span class="ruby-string">&#39;D-ObjDump&#39;</span>, <span class="ruby-string">&#39;Darcs Patch&#39;</span>, <span class="ruby-string">&#39;Dart&#39;</span>, <span class="ruby-string">&#39;desktop&#39;</span>, <span class="ruby-string">&#39;Diff&#39;</span>,
+   <span class="ruby-string">&#39;DIGITAL Command Language&#39;</span>, <span class="ruby-string">&#39;DM&#39;</span>, <span class="ruby-string">&#39;DNS Zone&#39;</span>, <span class="ruby-string">&#39;Dockerfile&#39;</span>, <span class="ruby-string">&#39;Dogescript&#39;</span>, <span class="ruby-string">&#39;DTrace&#39;</span>, <span class="ruby-string">&#39;Dylan&#39;</span>, <span class="ruby-string">&#39;E&#39;</span>, <span class="ruby-string">&#39;Eagle&#39;</span>, <span class="ruby-string">&#39;eC&#39;</span>, <span class="ruby-string">&#39;Ecere Projects&#39;</span>, <span class="ruby-string">&#39;ECL&#39;</span>, <span class="ruby-string">&#39;ECLiPSe&#39;</span>, <span class="ruby-string">&#39;edn&#39;</span>, <span class="ruby-string">&#39;Eiffel&#39;</span>, <span class="ruby-string">&#39;Elixir&#39;</span>, <span class="ruby-string">&#39;Elm&#39;</span>,
+   <span class="ruby-string">&#39;Emacs Lisp&#39;</span>, <span class="ruby-string">&#39;EmberScript&#39;</span>, <span class="ruby-string">&#39;Erlang&#39;</span>, <span class="ruby-string">&#39;F#&#39;</span>, <span class="ruby-string">&#39;Factor&#39;</span>, <span class="ruby-string">&#39;Fancy&#39;</span>, <span class="ruby-string">&#39;Fantom&#39;</span>, <span class="ruby-string">&#39;Filterscript&#39;</span>, <span class="ruby-string">&#39;fish&#39;</span>, <span class="ruby-string">&#39;FLUX&#39;</span>, <span class="ruby-string">&#39;Formatted&#39;</span>, <span class="ruby-string">&#39;Forth&#39;</span>, <span class="ruby-string">&#39;FORTRAN&#39;</span>, <span class="ruby-string">&#39;Frege&#39;</span>, <span class="ruby-string">&#39;G-code&#39;</span>, <span class="ruby-string">&#39;Game Maker Language&#39;</span>, <span class="ruby-string">&#39;GAMS&#39;</span>,
+   <span class="ruby-string">&#39;GAP&#39;</span>, <span class="ruby-string">&#39;GAS&#39;</span>, <span class="ruby-string">&#39;GDScript&#39;</span>, <span class="ruby-string">&#39;Genshi&#39;</span>, <span class="ruby-string">&#39;Gentoo Ebuild&#39;</span>, <span class="ruby-string">&#39;Gentoo Eclass&#39;</span>, <span class="ruby-string">&#39;Gettext Catalog&#39;</span>, <span class="ruby-string">&#39;GLSL&#39;</span>, <span class="ruby-string">&#39;Glyph&#39;</span>, <span class="ruby-string">&#39;Gnuplot&#39;</span>, <span class="ruby-string">&#39;Golo&#39;</span>, <span class="ruby-string">&#39;Gosu&#39;</span>, <span class="ruby-string">&#39;Grace&#39;</span>, <span class="ruby-string">&#39;Gradle&#39;</span>, <span class="ruby-string">&#39;Grammatical Framework&#39;</span>,
+   <span class="ruby-string">&#39;Graph Modeling Language&#39;</span>, <span class="ruby-string">&#39;Graphviz (DOT)&#39;</span>, <span class="ruby-string">&#39;Groff&#39;</span>, <span class="ruby-string">&#39;Groovy&#39;</span>, <span class="ruby-string">&#39;Groovy Server Pages&#39;</span>, <span class="ruby-string">&#39;Hack&#39;</span>, <span class="ruby-string">&#39;Haml&#39;</span>, <span class="ruby-string">&#39;Handlebars&#39;</span>, <span class="ruby-string">&#39;Harbour&#39;</span>, <span class="ruby-string">&#39;Haxe&#39;</span>, <span class="ruby-string">&#39;HCL&#39;</span>, <span class="ruby-string">&#39;HTML+Django&#39;</span>, <span class="ruby-string">&#39;HTML+ERB&#39;</span>, <span class="ruby-string">&#39;HTML+PHP&#39;</span>, <span class="ruby-string">&#39;HTTP&#39;</span>,
+   <span class="ruby-string">&#39;Hy&#39;</span>, <span class="ruby-string">&#39;HyPhy&#39;</span>, <span class="ruby-string">&#39;IDL&#39;</span>, <span class="ruby-string">&#39;Idris&#39;</span>, <span class="ruby-string">&#39;IGOR Pro&#39;</span>, <span class="ruby-string">&#39;Inform 7&#39;</span>, <span class="ruby-string">&#39;INI&#39;</span>, <span class="ruby-string">&#39;Inno Setup&#39;</span>, <span class="ruby-string">&#39;Io&#39;</span>, <span class="ruby-string">&#39;Ioke&#39;</span>, <span class="ruby-string">&#39;IRC log&#39;</span>, <span class="ruby-string">&#39;Isabelle&#39;</span>, <span class="ruby-string">&#39;Isabelle ROOT&#39;</span>, <span class="ruby-string">&#39;J&#39;</span>, <span class="ruby-string">&#39;Jade&#39;</span>, <span class="ruby-string">&#39;Jasmin&#39;</span>, <span class="ruby-string">&#39;Java Server Pages&#39;</span>, <span class="ruby-string">&#39;JFlex&#39;</span>, <span class="ruby-string">&#39;JSON&#39;</span>,
+   <span class="ruby-string">&#39;JSON5&#39;</span>, <span class="ruby-string">&#39;JSONiq&#39;</span>, <span class="ruby-string">&#39;JSONLD&#39;</span>, <span class="ruby-string">&#39;JSX&#39;</span>, <span class="ruby-string">&#39;Julia&#39;</span>, <span class="ruby-string">&#39;KiCad&#39;</span>, <span class="ruby-string">&#39;Kit&#39;</span>, <span class="ruby-string">&#39;Kotlin&#39;</span>, <span class="ruby-string">&#39;KRL&#39;</span>, <span class="ruby-string">&#39;LabVIEW&#39;</span>, <span class="ruby-string">&#39;Lasso&#39;</span>, <span class="ruby-string">&#39;Latte&#39;</span>, <span class="ruby-string">&#39;Lean&#39;</span>, <span class="ruby-string">&#39;Less&#39;</span>, <span class="ruby-string">&#39;Lex&#39;</span>, <span class="ruby-string">&#39;LFE&#39;</span>, <span class="ruby-string">&#39;LilyPond&#39;</span>, <span class="ruby-string">&#39;Limbo&#39;</span>, <span class="ruby-string">&#39;Linker Script&#39;</span>,
+   <span class="ruby-string">&#39;Linux Kernel Module&#39;</span>, <span class="ruby-string">&#39;Liquid&#39;</span>, <span class="ruby-string">&#39;Literate Agda&#39;</span>, <span class="ruby-string">&#39;Literate CoffeeScript&#39;</span>, <span class="ruby-string">&#39;Literate Haskell&#39;</span>, <span class="ruby-string">&#39;LiveScript&#39;</span>, <span class="ruby-string">&#39;LLVM&#39;</span>, <span class="ruby-string">&#39;Logos&#39;</span>, <span class="ruby-string">&#39;Logtalk&#39;</span>, <span class="ruby-string">&#39;LOLCODE&#39;</span>, <span class="ruby-string">&#39;LookML&#39;</span>, <span class="ruby-string">&#39;LoomScript&#39;</span>, <span class="ruby-string">&#39;LSL&#39;</span>, <span class="ruby-string">&#39;M&#39;</span>,
+   <span class="ruby-string">&#39;Makefile&#39;</span>, <span class="ruby-string">&#39;Mako&#39;</span>, <span class="ruby-string">&#39;Markdown&#39;</span>, <span class="ruby-string">&#39;Mask&#39;</span>, <span class="ruby-string">&#39;Mathematica&#39;</span>, <span class="ruby-string">&#39;Maven POM&#39;</span>, <span class="ruby-string">&#39;Max&#39;</span>, <span class="ruby-string">&#39;MediaWiki&#39;</span>, <span class="ruby-string">&#39;Mercury&#39;</span>, <span class="ruby-string">&#39;MiniD&#39;</span>, <span class="ruby-string">&#39;Mirah&#39;</span>, <span class="ruby-string">&#39;Modelica&#39;</span>, <span class="ruby-string">&#39;Modula-2&#39;</span>, <span class="ruby-string">&#39;Module Management System&#39;</span>, <span class="ruby-string">&#39;Monkey&#39;</span>, <span class="ruby-string">&#39;Moocode&#39;</span>,
+   <span class="ruby-string">&#39;MoonScript&#39;</span>, <span class="ruby-string">&#39;MTML&#39;</span>, <span class="ruby-string">&#39;MUF&#39;</span>, <span class="ruby-string">&#39;mupad&#39;</span>, <span class="ruby-string">&#39;Myghty&#39;</span>, <span class="ruby-string">&#39;NCL&#39;</span>, <span class="ruby-string">&#39;Nemerle&#39;</span>, <span class="ruby-string">&#39;nesC&#39;</span>, <span class="ruby-string">&#39;NetLinx&#39;</span>, <span class="ruby-string">&#39;NetLinx+ERB&#39;</span>, <span class="ruby-string">&#39;NetLogo&#39;</span>, <span class="ruby-string">&#39;NewLisp&#39;</span>, <span class="ruby-string">&#39;Nginx&#39;</span>, <span class="ruby-string">&#39;Nimrod&#39;</span>, <span class="ruby-string">&#39;Ninja&#39;</span>, <span class="ruby-string">&#39;Nit&#39;</span>, <span class="ruby-string">&#39;Nix&#39;</span>, <span class="ruby-string">&#39;NL&#39;</span>, <span class="ruby-string">&#39;NSIS&#39;</span>, <span class="ruby-string">&#39;Nu&#39;</span>, <span class="ruby-string">&#39;NumPy&#39;</span>,
+   <span class="ruby-string">&#39;ObjDump&#39;</span>, <span class="ruby-string">&#39;Objective-C++&#39;</span>, <span class="ruby-string">&#39;Objective-J&#39;</span>, <span class="ruby-string">&#39;OCaml&#39;</span>, <span class="ruby-string">&#39;Omgrofl&#39;</span>, <span class="ruby-string">&#39;ooc&#39;</span>, <span class="ruby-string">&#39;Opa&#39;</span>, <span class="ruby-string">&#39;Opal&#39;</span>, <span class="ruby-string">&#39;OpenCL&#39;</span>, <span class="ruby-string">&#39;OpenEdge ABL&#39;</span>, <span class="ruby-string">&#39;OpenSCAD&#39;</span>, <span class="ruby-string">&#39;Org&#39;</span>, <span class="ruby-string">&#39;Ox&#39;</span>, <span class="ruby-string">&#39;Oxygene&#39;</span>, <span class="ruby-string">&#39;Oz&#39;</span>, <span class="ruby-string">&#39;Pan&#39;</span>, <span class="ruby-string">&#39;Papyrus&#39;</span>, <span class="ruby-string">&#39;Parrot&#39;</span>,
+   <span class="ruby-string">&#39;Parrot Assembly&#39;</span>, <span class="ruby-string">&#39;Parrot Internal Representation&#39;</span>, <span class="ruby-string">&#39;Pascal&#39;</span>, <span class="ruby-string">&#39;PAWN&#39;</span>, <span class="ruby-string">&#39;Perl6&#39;</span>, <span class="ruby-string">&#39;PicoLisp&#39;</span>, <span class="ruby-string">&#39;PigLatin&#39;</span>, <span class="ruby-string">&#39;Pike&#39;</span>, <span class="ruby-string">&#39;PLpgSQL&#39;</span>, <span class="ruby-string">&#39;PLSQL&#39;</span>, <span class="ruby-string">&#39;Pod&#39;</span>, <span class="ruby-string">&#39;PogoScript&#39;</span>, <span class="ruby-string">&#39;PostScript&#39;</span>, <span class="ruby-string">&#39;PowerShell&#39;</span>, <span class="ruby-string">&#39;Processing&#39;</span>,
+   <span class="ruby-string">&#39;Prolog&#39;</span>, <span class="ruby-string">&#39;Propeller Spin&#39;</span>, <span class="ruby-string">&#39;Protocol Buffer&#39;</span>, <span class="ruby-string">&#39;Public Key&#39;</span>, <span class="ruby-string">&#39;Puppet&#39;</span>, <span class="ruby-string">&#39;Pure Data&#39;</span>, <span class="ruby-string">&#39;PureBasic&#39;</span>, <span class="ruby-string">&#39;PureScript&#39;</span>, <span class="ruby-string">&#39;Python traceback&#39;</span>, <span class="ruby-string">&#39;QMake&#39;</span>, <span class="ruby-string">&#39;QML&#39;</span>, <span class="ruby-string">&#39;Racket&#39;</span>, <span class="ruby-string">&#39;Ragel in Ruby Host&#39;</span>, <span class="ruby-string">&#39;RAML&#39;</span>,
+   <span class="ruby-string">&#39;Raw token data&#39;</span>, <span class="ruby-string">&#39;RDoc&#39;</span>, <span class="ruby-string">&#39;REALbasic&#39;</span>, <span class="ruby-string">&#39;Rebol&#39;</span>, <span class="ruby-string">&#39;Red&#39;</span>, <span class="ruby-string">&#39;Redcode&#39;</span>, <span class="ruby-string">&#39;RenderScript&#39;</span>, <span class="ruby-string">&#39;reStructuredText&#39;</span>, <span class="ruby-string">&#39;RHTML&#39;</span>, <span class="ruby-string">&#39;RMarkdown&#39;</span>, <span class="ruby-string">&#39;RobotFramework&#39;</span>, <span class="ruby-string">&#39;Rouge&#39;</span>, <span class="ruby-string">&#39;Rust&#39;</span>, <span class="ruby-string">&#39;Sage&#39;</span>, <span class="ruby-string">&#39;SaltStack&#39;</span>, <span class="ruby-string">&#39;SAS&#39;</span>, <span class="ruby-string">&#39;Sass&#39;</span>,
+   <span class="ruby-string">&#39;Scaml&#39;</span>, <span class="ruby-string">&#39;Scheme&#39;</span>, <span class="ruby-string">&#39;Scilab&#39;</span>, <span class="ruby-string">&#39;SCSS&#39;</span>, <span class="ruby-string">&#39;Self&#39;</span>, <span class="ruby-string">&#39;ShellSession&#39;</span>, <span class="ruby-string">&#39;Shen&#39;</span>, <span class="ruby-string">&#39;Slash&#39;</span>, <span class="ruby-string">&#39;Slim&#39;</span>, <span class="ruby-string">&#39;Smali&#39;</span>, <span class="ruby-string">&#39;Smalltalk&#39;</span>, <span class="ruby-string">&#39;Smarty&#39;</span>, <span class="ruby-string">&#39;SMT&#39;</span>, <span class="ruby-string">&#39;SourcePawn&#39;</span>, <span class="ruby-string">&#39;SPARQL&#39;</span>, <span class="ruby-string">&#39;SQF&#39;</span>, <span class="ruby-string">&#39;SQL&#39;</span>, <span class="ruby-string">&#39;SQLPL&#39;</span>, <span class="ruby-string">&#39;Squirrel&#39;</span>,
+   <span class="ruby-string">&#39;Standard ML&#39;</span>, <span class="ruby-string">&#39;Stata&#39;</span>, <span class="ruby-string">&#39;STON&#39;</span>, <span class="ruby-string">&#39;Stylus&#39;</span>, <span class="ruby-string">&#39;SuperCollider&#39;</span>, <span class="ruby-string">&#39;SVG&#39;</span>, <span class="ruby-string">&#39;SystemVerilog&#39;</span>, <span class="ruby-string">&#39;Tcl&#39;</span>, <span class="ruby-string">&#39;Tcsh&#39;</span>, <span class="ruby-string">&#39;Tea&#39;</span>, <span class="ruby-string">&#39;Text&#39;</span>, <span class="ruby-string">&#39;Textile&#39;</span>, <span class="ruby-string">&#39;Thrift&#39;</span>, <span class="ruby-string">&#39;TOML&#39;</span>, <span class="ruby-string">&#39;Turing&#39;</span>, <span class="ruby-string">&#39;Turtle&#39;</span>, <span class="ruby-string">&#39;Twig&#39;</span>, <span class="ruby-string">&#39;TXL&#39;</span>, <span class="ruby-string">&#39;TypeScript&#39;</span>,
+   <span class="ruby-string">&#39;Unified Parallel C&#39;</span>, <span class="ruby-string">&#39;Unity3D Asset&#39;</span>, <span class="ruby-string">&#39;UnrealScript&#39;</span>, <span class="ruby-string">&#39;Vala&#39;</span>, <span class="ruby-string">&#39;VCL&#39;</span>, <span class="ruby-string">&#39;Verilog&#39;</span>, <span class="ruby-string">&#39;VHDL&#39;</span>, <span class="ruby-string">&#39;Visual Basic&#39;</span>, <span class="ruby-string">&#39;Volt&#39;</span>, <span class="ruby-string">&#39;Vue&#39;</span>, <span class="ruby-string">&#39;Web Ontology Language&#39;</span>, <span class="ruby-string">&#39;WebIDL&#39;</span>, <span class="ruby-string">&#39;wisp&#39;</span>, <span class="ruby-string">&#39;X10&#39;</span>, <span class="ruby-string">&#39;xBase&#39;</span>, <span class="ruby-string">&#39;XC&#39;</span>, <span class="ruby-string">&#39;XML&#39;</span>,
+   <span class="ruby-string">&#39;Xojo&#39;</span>, <span class="ruby-string">&#39;XPages&#39;</span>, <span class="ruby-string">&#39;XProc&#39;</span>, <span class="ruby-string">&#39;XQuery&#39;</span>, <span class="ruby-string">&#39;XS&#39;</span>, <span class="ruby-string">&#39;XSLT&#39;</span>, <span class="ruby-string">&#39;Xtend&#39;</span>, <span class="ruby-string">&#39;Yacc&#39;</span>, <span class="ruby-string">&#39;YAML&#39;</span>, <span class="ruby-string">&#39;Zephir&#39;</span>, <span class="ruby-string">&#39;Zimpl&#39;</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(attrs = {})
+            
+            <a href="../classes/Repo.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create a new repo opbject.</p>
+
+<h4 id="method-c-new-label-Parameters">Parameters</h4>
+<ul><li>
+<p><code>attrs</code> - Attributes from a repo returned by the GitHub API.
+Only known attributes are copied.</p>
+</li></ul>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/repo.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">attrs</span> = {})
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span> = <span class="ruby-identifier">fetch_owner</span>(<span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:owner</span>))
+
+  <span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{name}=&quot;</span>.<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">value</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-node">&quot;#{name}=&quot;</span>.<span class="ruby-identifier">to_sym</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-popular_languages">
+            
+              <b>popular_languages</b>()
+            
+            <a href="../classes/Repo.html#method-c-popular_languages" name="method-c-popular_languages" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>List of popular languages, taken from <a
+href="https://github.com/search/advanced">github.com/search/advanced</a>.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-popular_languages_source')" id="l_method-c-popular_languages_source">show</a>
+                
+              </p>
+              <div id="method-c-popular_languages_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/repo.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">popular_languages</span>
+  [<span class="ruby-string">&#39;ActionScript&#39;</span>, <span class="ruby-string">&#39;C&#39;</span>, <span class="ruby-string">&#39;C#&#39;</span>, <span class="ruby-string">&#39;C++&#39;</span>, <span class="ruby-string">&#39;Clojure&#39;</span>, <span class="ruby-string">&#39;CoffeeScript&#39;</span>, <span class="ruby-string">&#39;CSS&#39;</span>, <span class="ruby-string">&#39;Go&#39;</span>, <span class="ruby-string">&#39;Haskell&#39;</span>, <span class="ruby-string">&#39;HTML&#39;</span>, <span class="ruby-string">&#39;Java&#39;</span>, <span class="ruby-string">&#39;JavaScript&#39;</span>, <span class="ruby-string">&#39;Lua&#39;</span>, <span class="ruby-string">&#39;Matlab&#39;</span>, <span class="ruby-string">&#39;Objective-C&#39;</span>, <span class="ruby-string">&#39;Perl&#39;</span>, <span class="ruby-string">&#39;PHP&#39;</span>, <span class="ruby-string">&#39;Python&#39;</span>, <span class="ruby-string">&#39;R&#39;</span>, <span class="ruby-string">&#39;Ruby&#39;</span>, <span class="ruby-string">&#39;Scala&#39;</span>,
+   <span class="ruby-string">&#39;Shell&#39;</span>, <span class="ruby-string">&#39;Swift&#39;</span>, <span class="ruby-string">&#39;TeX&#39;</span>, <span class="ruby-string">&#39;VimL&#39;</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-3D-3D">
+            
+              <b>==</b>(other)
+            
+            <a href="../classes/Repo.html#method-i-3D-3D" name="method-i-3D-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Compare two repo objects by their attributes.</p>
+
+<h4 id="method-i-3D-3D-label-Parameters">Parameters</h4>
+<ul><li>
+<p><code>other</code> - The other repo object to compare against.</p>
+</li></ul>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-3D-3D_source')" id="l_method-i-3D-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-3D-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/repo.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-keyword ruby-title">other</span>)
+  <span class="ruby-operator">!</span><span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">attribute</span><span class="ruby-operator">|</span> <span class="ruby-identifier">send</span>(<span class="ruby-identifier">attribute</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">attribute</span>) }.<span class="ruby-identifier">include?</span>(<span class="ruby-keyword">false</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    
