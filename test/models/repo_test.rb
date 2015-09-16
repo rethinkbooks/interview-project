@@ -4,7 +4,7 @@ class RepoTest < ActiveSupport::TestCase
     name: 'rosetta-euler',
     full_name: 'seaneshbaugh/rosetta-euler',
     private: false,
-    html_url: 'https://github.com/seaneshbaugh/rosetta-euler',
+    html_url: 'https://github.com/seaneshbaugh/rosetta-euler'
   }
 
   test 'should have an empty owner object if no owner is passed in the attrs argument' do

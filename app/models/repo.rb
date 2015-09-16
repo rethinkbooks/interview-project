@@ -73,7 +73,7 @@ class Repo
   # These two lists are taken directly from the GitHub advanced search page:
   # https://github.com/search/advanced
   def self.popular_languages
-    ['ActionScript', 'C', 'C#', 'C++', 'Clojure', 'CoffeeScript', 'CSS', 'Go', 'Haskell', 'HTML', 'Java','JavaScript', 'Lua', 'Matlab', 'Objective-C', 'Perl', 'PHP', 'Python', 'R', 'Ruby', 'Scala',
+    ['ActionScript', 'C', 'C#', 'C++', 'Clojure', 'CoffeeScript', 'CSS', 'Go', 'Haskell', 'HTML', 'Java', 'JavaScript', 'Lua', 'Matlab', 'Objective-C', 'Perl', 'PHP', 'Python', 'R', 'Ruby', 'Scala',
      'Shell', 'Swift', 'TeX', 'VimL']
   end
 
@@ -109,8 +109,8 @@ class Repo
     end
   end
 
-  def ==(other_repo)
-    !attributes.keys.map { |attribute| self.send(attribute) == other_repo.send(attribute) }.include?(false)
+  def ==(other)
+    !attributes.keys.map { |attribute| send(attribute) == other.send(attribute) }.include?(false)
   end
 
   private

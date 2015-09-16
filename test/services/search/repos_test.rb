@@ -8,7 +8,7 @@ module Search
 
     test 'should return an array of repos that match a query' do
       VCR.use_cassette('repo search rosetta euler') do
-        results = Search::Repos.call({ q: 'rosetta euler' })
+        results = Search::Repos.call(q: 'rosetta euler')
 
         assert_equal 3, results.total_count
 
@@ -20,7 +20,7 @@ module Search
 
     test 'should return an array of repos sorted in descending order' do
       VCR.use_cassette('repo search rosetta euler desc') do
-        results = Search::Repos.call({ q: 'rosetta euler', order: 'desc' })
+        results = Search::Repos.call(q: 'rosetta euler', order: 'desc')
 
         assert_equal results, results.sort { |a, b| b.stargazers_count <=> a.stargazers_count }
       end
@@ -28,7 +28,7 @@ module Search
 
     test 'should return an array of repos sorted in ascending order' do
       VCR.use_cassette('repo search rosetta euler asc') do
-        results = Search::Repos.call({ q: 'rosetta euler', order: 'asc' })
+        results = Search::Repos.call(q: 'rosetta euler', order: 'asc')
 
         assert_equal results, results.sort { |a, b| a.stargazers_count <=> b.stargazers_count }
       end
@@ -36,7 +36,7 @@ module Search
 
     test 'should return an array of repos matching the specified language if provided' do
       VCR.use_cassette('repo search rails javascript') do
-        results = Search::Repos.call({ q: 'rails', language: 'JavaScript', per_page: 5 })
+        results = Search::Repos.call(q: 'rails', language: 'JavaScript', per_page: 5)
 
         results.each do |result|
           assert_equal 'JavaScript', result.language

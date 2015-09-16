@@ -25,7 +25,7 @@ class Owner
     end
   end
 
-  def ==(other_owner)
-    !attributes.keys.map { |attribute| self.send(attribute) == other_owner.send(attribute) }.include?(false)
+  def ==(other)
+    !attributes.keys.map { |attribute| send(attribute) == other.send(attribute) }.include?(false)
   end
 end
