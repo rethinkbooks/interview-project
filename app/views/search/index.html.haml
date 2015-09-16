@@ -19,6 +19,7 @@
     = f.button '<span class="glyphicon glyphicon-search"></span> Search'.html_safe, class: 'btn btn-primary'
 - if params[:q].present?
   %h1 Search Results
+  %p#results-count= "Showing #{@repos.offset_value + 1} to #{@repos.offset_value + @repos.count} of #{@repos.total_count}"
   - if @repos.present?
     #repos
       .row.hidden-xs
