@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
   def index
-    @repos = Search::Repos.call(params[:q], params[:page])
+    @repos = Search::Repos.call(params.slice(:q, :page, :order))
   end
 end
