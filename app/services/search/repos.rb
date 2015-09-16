@@ -5,7 +5,7 @@ module Search
 
       return Kaminari.paginate_array([], total_count: 0) if query.blank?
 
-      client = Octokit::Client.new
+      client = Octokit::Client.new(access_token: args.delete(:access_token))
 
       options = search_options(args)
 
