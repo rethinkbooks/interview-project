@@ -1,12 +1,25 @@
+.well
+  = bootstrap_form_tag url: root_path, html: { class: 'form-inline', method: :get } do |f|
+    = f.text_field :q, value: params[:q], label: 'Search Repos on GitHub:&nbsp;'.html_safe
+    = f.button '<span class="glyphicon glyphicon-search"></span> Search'.html_safe, class: 'btn btn-primary'
 - if params[:q].present?
   %h1 Search Results
   - if @repos.present?
     #repos
+      .row.hidden-xs
+        .title.col-sm-6
+          Repo
+        .title.col-sm-3
+          Langauge
+        .title.col-sm-3.text-right
+          Stargazers
       - @repos.each do |repo|
-        .repo
-          .repo-name
-            = repo.name
-          .repo-language
+        .repo.row
+          .repo-name.col-xs-12.col-sm-6
+            = link_to repo.full_name, repo.html_url
+          .repo-language.col-xs-6.col-sm-3
             = repo.language
+          .repo-stars.col-xs-6.col-sm-3.text-right
+            = "#{repo.stargazers_count} &#x2605;".html_safe
   - else
     %p No results found
