@@ -18,6 +18,16 @@ module Search
       end
     end
 
+    test 'should perform a search using an instance of the service' do
+      VCR.use_cassette('repo search rosetta euler') do
+        service = Search::Repos.new(q: 'rosetta euler')
+
+        results = service.call
+
+        assert_equal 3, results.total_count
+      end
+    end
+
     test 'should return an array of repos sorted in descending order' do
       VCR.use_cassette('repo search rosetta euler desc') do
         results = Search::Repos.call(q: 'rosetta euler', order: 'desc')

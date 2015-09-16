@@ -1,5 +1,5 @@
 module Search
-  module Repos
+  class Repos
     def self.call(args = {})
       query = args.delete(:q)
 
@@ -18,13 +18,12 @@ module Search
       Kaminari.paginate_array(repos, total_count: results[:total_count]).page(options[:page]).per(options[:per_page])
     end
 
-    private
-
     def self.build_query(query, args)
       qualifiers = args.slice(:in, :size, :forks, :fork, :created, :pushed, :user, :repo, :language, :stars).map { |qualifier, value| "#{qualifier}:#{value}" }
 
       [query, qualifiers.join(' ')].reject(&:blank?).join(' ')
     end
+    private_class_method :build_query
 
     def self.search_options(args)
       page = args.delete(:page).to_s.to_i
@@ -40,6 +39,17 @@ module Search
       sort = 'stars' unless order.nil?
 
       { page: page, per_page: per_page, sort: sort, order: order }
+    end
+    private_class_method :search_options
+
+    def initialize(args = {})
+      @args = args
+    end
+
+    def call(args = nil)
+      @args ||= args
+
+      self.class.call(@args)
     end
   end
 end
