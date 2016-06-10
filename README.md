@@ -1,7 +1,7 @@
 # interview-project
 Bookshout interview project.
 
-Assignment: Using the GitHub Search API, implement a basic web app that queries repositories based on user input and displays the following data / options:
+Assignment: Using the GitHub Search API, implement a single page React/Rails web app that queries repositories based on user input and displays the following data / options:
 
 Business Requirements:
 - A list of the results along with the programming language for that repo
