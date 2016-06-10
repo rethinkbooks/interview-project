@@ -12,10 +12,10 @@ Business Requirements:
 
 Technical Requirements:
 - Use Ruby on Rails
+- Use ReactJS
 - Push code to GitHub public repo
 - While the GitHub search API is public and can be used without authentication, you must authenticate your user and make authenticated requests. Tools like Omniauth / Devise might be useful.
 - It must be deployed to either a micro EC2 instance or Heroku Instance
-- While we won't be too picky on the front end, ideally the app should be presentable. A basic Bootstrap or Foundation theme is perfect
 - You must persist some data in a database. Ideally, this would be the user's information that comes back from their API after authenticating with OAuth 2
 
 
