@@ -1,0 +1,4 @@
+#sign-in
+  %h1 Sign In
+  %p Please sign in with your GitHub account to begin searching.
+  = link_to "#{image_tag('GitHub-Mark-Light-32px.png')} Sign in with GitHub".html_safe, user_omniauth_authorize_path(:github), class: 'btn btn-primary btn-large'

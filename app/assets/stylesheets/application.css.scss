@@ -1,0 +1,131 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require rails_bootstrap_forms
+ *= require bootstrap-combobox
+ *= require_tree .
+ *= require_self
+ */
+
+@charset "utf-8";
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "mixins";
+@import "variables";
+
+body {
+    padding-top: 70px;
+}
+
+#main-navbar {
+    .current-user {
+        a {
+            padding-bottom: 9px;
+            padding-top: 11px;
+
+            img {
+                max-height: 30px;
+            }
+        }
+    }
+}
+
+#sign-in {
+    border: 1px solid #e9e9F9;
+    border-radius: 4px;
+    margin: 20px auto 0;
+    max-width: 350px;
+    overflow: hidden;
+
+    h1 {
+        background-color: #f7f7ff;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.7rem;
+        font-weight: bold;
+        margin: 10px;
+        text-align: center;
+    }
+
+    a {
+        border-radius: 0;
+        display: block;
+        line-height: 20px;
+        margin: 0 auto;
+        vertical-align: middle;
+
+        img {
+            height: 20px;
+        }
+    }
+}
+
+#no-results {
+    color: $gray-light;
+    font-size: 1.9rem;
+}
+
+#results-count {
+    color: #c9c9c9;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.form-inline {
+    .combobox-container {
+        display: block;
+    }
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.repo {
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    &:nth-of-type(even) {
+        background: $gray-lighter;
+    }
+
+    .repo-name {
+        font-size: 2.0rem;
+    }
+}
+
+@media (min-width: $screen-sm) {
+    .form-inline {
+        label {
+            line-height: 33px;
+        }
+
+        button {
+            margin-left: 5px;
+        }
+
+        .combobox-container {
+            display: inline-block;
+        }
+    }
+}

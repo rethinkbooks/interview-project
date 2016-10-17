@@ -1,0 +1,43 @@
+.well
+  = bootstrap_form_tag url: root_path, html: { class: 'form-inline', method: :get } do |f|
+    = f.text_field :q, value: params[:q], label: 'Repo Name:&nbsp;'.html_safe
+    = f.form_group :language, label: { text: 'Language:&nbsp;'.html_safe } do
+      %select.combobox.form-control{ name: 'language' }
+        %option{ value: '', selected: params[:language].blank? } Any
+        %optgroup{ label: 'Popular' }
+          - Repo.popular_languages.each do |language|
+            %option{ value: language, selected: params[:language] == language }= language
+        %optgroup{ label: 'Esoteric' }
+          - Repo.esoteric_languages.each do |language|
+            %option{ value: language, selected: params[:language] == language }= language
+    %br.visible-sm
+    = f.form_group :sort, label: { text: 'Sort By:&nbsp;'.html_safe } do
+      = f.radio_button :order, '', label: 'Relevance', checked: !['desc', 'asc'].include?(params[:order]), name: 'order'
+      = f.radio_button :order, 'desc', label: 'Stars Descending', checked: params[:order] == 'desc', name: 'order'
+      = f.radio_button :order, 'asc', label: 'Stars Ascending', checked: params[:order] == 'asc', name: 'order'
+    %br.visible-sm.visible-md
+    = f.button '<span class="glyphicon glyphicon-search"></span> Search'.html_safe, class: 'btn btn-primary'
+- if params[:q].present?
+  %h1 Search Results
+  %p#results-count= "Showing #{@repos.offset_value + 1} to #{@repos.offset_value + @repos.count} of #{@repos.total_count}"
+  - if @repos.present?
+    #repos
+      .row.hidden-xs
+        .title.col-sm-6
+          Repo
+        .title.col-sm-3
+          Langauge
+        .title.col-sm-3.text-right
+          Stargazers
+      - @repos.each do |repo|
+        .repo.row
+          .repo-name.col-xs-12.col-sm-6
+            = link_to repo.full_name, repo.html_url, target: '_blank'
+          .repo-language.col-xs-6.col-sm-3
+            = repo.language
+          .repo-stars.col-xs-6.col-sm-3.text-right
+            = repo.stargazers_count
+            = link_to '&#x2605;'.html_safe, "#{repo.html_url}/stargazers", target: '_blank'
+    = paginate @repos, route: :root_path
+  - else
+    %p#no-results No results found.
