@@ -11,7 +11,7 @@ Business Requirements:
 - Persist the user's information upon logging in to the app in a DB
 
 Technical Requirements:
-- Use backend OOP framework of your choice.
+- Use Ruby on Rails as backend app.
 - Push code to GitHub public repo
 - While the GitHub search API is public and can be used without authentication, you must authenticate your user and make authenticated requests. Use oauth.
 - It must be deployed to either a micro EC2 instance or Heroku Instance
